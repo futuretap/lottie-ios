@@ -1,5 +1,5 @@
 import Foundation
-#if os(iOS) || os(tvOS) || os(watchOS) || targetEnvironment(macCatalyst)
+#if os(iOS) || os(tvOS) || os(watchOS) || targetEnvironment(macCatalyst) || os(visionOS)
 import UIKit
 #endif
 

@@ -5,7 +5,7 @@
 //  Created by Brandon Withrow on 2/6/19.
 //
 
-#if os(iOS) || os(tvOS) || os(watchOS) || targetEnvironment(macCatalyst)
+#if os(iOS) || os(tvOS) || os(watchOS) || targetEnvironment(macCatalyst) || os(visionOS)
 import UIKit
 
 /// The base view for `LottieAnimationView` on iOS, tvOS, watchOS, and macCatalyst.
@@ -38,7 +38,11 @@ open class LottieAnimationViewBase: UIView {
   }
 
   var screenScale: CGFloat {
+#if os(visionOS)
+    3
+#else
     UIScreen.main.scale
+#endif
   }
 
   func layoutAnimation() {

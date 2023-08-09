@@ -7,7 +7,7 @@
 
 import CoreGraphics
 import Foundation
-#if os(iOS) || os(tvOS) || os(watchOS) || targetEnvironment(macCatalyst)
+#if os(iOS) || os(tvOS) || os(watchOS) || targetEnvironment(macCatalyst) || os(visionOS)
 import UIKit
 
 /// An `AnimationImageProvider` that provides images by name from a specific bundle.

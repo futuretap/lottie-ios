@@ -292,7 +292,7 @@ extension Archive {
       #endif
     } else {
       let fileManager = FileManager()
-      #if os(macOS) || os(iOS) || os(watchOS) || os(tvOS)
+      #if os(macOS) || os(iOS) || os(watchOS) || os(tvOS) || os(visionOS) 
       do {
         _ = try fileManager.replaceItemAt(url, withItemAt: archive.url)
       } catch {
